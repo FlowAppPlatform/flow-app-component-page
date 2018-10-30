@@ -3,6 +3,16 @@ import React from 'react';
 import AppComponent from 'flow-app-component';
 
 class PageComponent extends AppComponent {
+  static properties = {
+    iconUrl: '/assets/images/text-component.svg',
+    name: 'Page',
+    componentType: 'page',
+    category: 'Views',
+    parent: null,
+    showOnComponentsPanel: false,
+    isValuable: true
+  };
+
   constructor() {
     super();
     const newState = {
@@ -42,13 +52,8 @@ class PageComponent extends AppComponent {
           ],
         },
       ],
-      iconUrl: '/assets/images/text-component.svg',
-      name: 'Page',
-      componentType: 'page',
-      category: 'Views',
-      parent: null,
-      showOnComponentsPanel: false,
-      isValuable: true,
+
+      ...PageComponent.properties
     };
 
     this.state = Object.assign(this.state, newState); // merge two states together, and dont lose any parent state properties.
