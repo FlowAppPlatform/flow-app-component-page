@@ -49,6 +49,8 @@ class PageComponent extends AppComponent {
       parent: null,
       showOnComponentsPanel: false,
       isValuable: true,
+      allowsChildren: true,
+      allowedChildTypes: ['checkbox', 'container', 'link', 'image', 'input', 'form', 'search', 'text', 'loader', 'radio', 'map', 'nav', 'video', 'dropdown'],
     };
 
     this.state = Object.assign(this.state, newState); // merge two states together, and dont lose any parent state properties.
