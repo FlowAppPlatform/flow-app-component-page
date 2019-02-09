@@ -9,7 +9,7 @@ class PageComponent extends AppComponent {
       properties: [
         {
           categoryName: 'General',
-          categoryDescription: 'Basic Settings about thei page.',
+          categoryDescription: 'Basic page settings',
           properties: [
             {
               id: 'name',
@@ -38,6 +38,22 @@ class PageComponent extends AppComponent {
               type: 'boolean',
               options: {},
               data: null,
+            },
+          ],
+        },
+        {
+          categoryName: 'Access Control',
+          categoryDescription: 'Control access to the directory',
+          properties: [
+            {
+              id: 'allowed-roles',
+              name: 'Allowed Roles',
+              type: 'roles',
+              description: 'Select roles that have access to this page',
+              value: 'all',
+              options: {
+                multi: true,
+              },
             },
           ],
         },
