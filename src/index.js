@@ -1,6 +1,6 @@
 import React from 'react';
-
 import AppComponent from 'flow-app-component';
+import allowedChildTypes from './allowed-child-types';
 
 class PageComponent extends AppComponent {
   constructor() {
@@ -66,7 +66,7 @@ class PageComponent extends AppComponent {
       showOnComponentsPanel: false,
       isValuable: true,
       allowsChildren: true,
-      allowedChildTypes: ['checkbox', 'container', 'link', 'image', 'input', 'form', 'search', 'text', 'loader', 'radio', 'map', 'nav', 'video', 'dropdown'],
+      allowedChildTypes,
     };
 
     this.state = Object.assign(this.state, newState); // merge two states together, and dont lose any parent state properties.
